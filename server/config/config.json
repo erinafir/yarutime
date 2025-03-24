@@ -1,13 +1,13 @@
 {
   "development": {
-    "username": "postgres",
+    "username": "erinafirdausy",
     "password": "postgres",
     "database": "db_yarutime",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "username": "postgres",
+    "username": "erinafirdausy",
     "password": "postgres",
     "database": "db_yarutime_test",
     "host": "127.0.0.1",

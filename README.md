@@ -1,136 +1,95 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=15384691&assignment_repo_type=AssignmentRepo)
-# Individual Project Phase 2
+# 🚀 YaruTime - Simple Todo App
 
+A straightforward todo application built as a learning project to understand web development fundamentals. YaruTime helps you keep track of your daily tasks in a simple, clean interface.
 
-# Yaru!Time API Documentation
+## ⭐ Features
 
-## Deployed Links
-Server: https://server-yarutime.rinafira.my.id
-Client: https://yarutime.web.app
+- ✏️ Create, Read, Update, Delete tasks
+- 🔐 Basic user authentication
+- 📱 Responsive design
+- 🔄 Real-time task updates
 
-## Endpoints
+## 🛠️ Technology Stack
 
-List of available endpoints:
+### Frontend
+- React.js
+- Axios for API calls
+- Simple and clean UI
+- Google OAuth login option
 
-- `POST /user-login`
-- `POST /user-login/google`
-- `POST /user-register`
+### Backend
+- Node.js
+- Express.js
+- JWT for authentication
+- PostgreSQL Database
 
-And routes below need authentication
+## 🚀 Getting Started
 
-- `POST /chat-openAi`
-- `GET /user-detail`
-
-- `POST /task`
-- `GET /task`
-- `GET /task/:id`
-
-And routes below need authorizationTask (task author must match with user logged in)
-- `PUT /task/:id`
-- `DELETE /task/:id`
-
-And routes below need authorizationUser (user must match with token)
-- `PUT /user-update`
-
-## 1. POST /user-register
-
-Request:
-
-- body:
-
-```json
-{
-  "fullName": "string (required)",
-  "email": "string (required)",
-  "password": "integer (required)",
-  "gender": "string (required)",
-  "phoneNumber": "integer (required)"
-}
+1. **Clone and Install**
+```bash
+git clone [repository-url]
+cd yarutime
+npm install
 ```
 
-_Response (201 - Created)_
+2. **Run the Application**
+```bash
+# Server (Port 4000)
+cd server
+npm start
 
-```json
-{
-  "fullName": "string (required)",
-  "email": "string (required)"
-}
+# Client
+cd client
+npm start
 ```
 
-_Response (400 - Bad Request)_
+> 💡 **Notes**: This is a learning project, created with a focus on understanding the basic concepts of web development.
 
-```json
-{
-  "message": "Full name cannot be empty"
-}
-OR
-{
-  "message": "Email cannot be empty"
-}
-OR
-{
-  "message": "Password cannot be empty"
-}
-OR
-{
-  "message": "Gender cannot be empty"
-}
-OR
-{
-  "message": "Phone number cannot be empty"
-}
+---
+
+# 🚀 YaruTime - Aplikasi Todo Sederhana
+
+Aplikasi todo yang dibuat sebagai proyek pembelajaran untuk memahami dasar-dasar pengembangan web. YaruTime membantu Anda melacak tugas harian dengan antarmuka yang sederhana dan bersih.
+
+## ⭐ Fitur
+
+- ✏️ Buat, Baca, Perbarui, Hapus tugas
+- 🔐 Autentikasi pengguna dasar
+- 📱 Desain responsif
+- 🔄 Pembaruan tugas langsung
+
+## 🛠️ Teknologi yang Digunakan
+
+### Frontend
+- React.js
+- Axios untuk panggilan API
+- UI sederhana dan bersih
+- Opsi login Google OAuth
+
+### Backend
+- Node.js
+- Express.js
+- JWT untuk autentikasi
+- Database PostgreSQL
+
+## 🚀 Memulai
+
+1. **Clone dan Install**
+```bash
+git clone [url-repository]
+cd yarutime
+npm install
 ```
 
-&nbsp;
+2. **Jalankan Aplikasi**
+```bash
+# Server (Port 4000)
+cd server
+npm start
 
-## 2. POST /user-login
-
-Request:
-
-- body:
-
-```json
-{
-  "email": "string (required)",
-  "password": "integer (required)"}
+# Client
+cd client
+npm start
 ```
 
-_Response (200 - Created)_
-
-```json
-{
-  "access_token": "string"
-}
-```
-
-_Response (400 - Bad Request)_
-
-```json
-{
-  "message": "Email cannot be empty"
-}
-OR
-{
-  "message": "Password cannot be empty"
-}
-```
-
-&nbsp;
-
-## Global Error
-
-_Response (401 - Unauthorized)_
-
-```json
-{
-  "message": "Invalid token"
-}
-```
-
-_Response (500 - Internal Server Error)_
-
-```json
-{
-  "message": "Internal server error"
-}
-```
+> 💡 **Catatan**: Ini adalah proyek pembelajaran, dibuat dengan fokus pada pemahaman konsep dasar pengembangan web.
